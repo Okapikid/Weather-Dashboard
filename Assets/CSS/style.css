@@ -5,3 +5,9 @@ header {
 .vh-50 {
   min-height: 50vh;
 }
+
+.card {
+  border-radius: 5px;
+  background-color: #1e5dd9;
+  color: white;
+}

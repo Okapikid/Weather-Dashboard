@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Weather Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
   <link rel="stylesheet" href="./Assets/CSS/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
+  <title>Weather Dashboard</title>
 </head>
 
 <body>
@@ -37,28 +36,58 @@
       <div class="col-6 col-md-9 border">
         <div class="row border mx-5 vh-50" id="weather-data">
           <div>
-            <h1 id="city"></h1>
-            <h4 id="temp"></h4>
-            <h4 id="wind"></h4>
-            <h4 id="humidity"></h4>
-            <h4 id="uv"></h4>
+            <h1 id="city">Please enter a city name ...</h1>
+            <h4 id="temp">Temperature: </h4>
+            <h4 id="wind">Wind: </h4>
+            <h4 id="humidity">Humidity: </h4>
+            <h4 id="uv">UV Index: </h4>
           </div>
           <div class="column">
             <div id="icon"></div>
           </div>
         </div>
-        <div class="container border m-5">
-          <div>
-            <h2>5-day forecast</h2>
-            <div class="cards">
-
-            </div>
+        <div class="row border m-5">
+          <div class="card col-9 col-md-3 col-lg-2 m-1">
+            <div id="date1"></div>
+            <div id="icon1"></div>
+            <div id="temp1">Temp: </div>
+            <div id="wind1">Wind: </div>
+            <div id="humidity1">Humidity: </div>
+          </div>
+          <div class="card col-9 col-md-3 col-lg-2 m-1">
+            <div id="date2"></div>
+            <div id="icon2"></div>
+            <div id="temp2">Temp: </div>
+            <div id="wind2">Wind: </div>
+            <div id="humidity2">Humidity: </div>
+          </div>
+          <div class="card col-9 col-md-3 col-lg-2 m-1">
+            <div id="date3"></div>
+            <div id="icon3"></div>
+            <div id="temp3">Temp: </div>
+            <div id="wind3">Wind: </div>
+            <div id="humidity3">Humidity: </div>
+          </div>
+          <div class="card col-9 col-md-3 col-lg-2 m-1">
+            <div id="date4"></div>
+            <div id="icon4"></div>
+            <div id="temp4">Temp: </div>
+            <div id="wind4">Wind: </div>
+            <div id="humidity4">Humidity: </div>
+          </div>
+          <div class="card col-9 col-md-3 col-lg-2 m-1">
+            <div id="date5"></div>
+            <div id="icon5"></div>
+            <div id="temp5">Temp: </div>
+            <div id="wind5">Wind: </div>
+            <div id="humidity5">Humidity: </div>
           </div>
         </div>
       </div>
     </div>
+    </div>
   </main>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./Assets/JS/script.js" async defer></script>
 </body>
 
