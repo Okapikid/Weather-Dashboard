@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Weather Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
+  <link rel="stylesheet" href="./Assets/CSS/style.css">
+</head>
+
+<body>
+  <header class="container-fluid text-center text-white h1 bold">
+    Weather Dashboard
+  </header>
+  <main class="container-fluid">
+    <div class="row border">
+      <div class="col-5 col-md-3 h4 border">
+        Search for a City:
+        <form>
+          <input class="input" id="city" type="text" placeholder="Choose a city">
+          <button class="button" id="submit" type="submit">
+            Search
+          </button>
+        </form>
+        <div class="box border">
+          <div class="table-container border">
+            <table class="table" id="searchedCities">
+              <tr></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-9 border">
+        <div class="row border mx-5 vh-50" id="weather-data">
+          <div>
+            <h1 id="city"></h1>
+            <h4 id="temp"></h4>
+            <h4 id="wind"></h4>
+            <h4 id="humidity"></h4>
+            <h4 id="uv"></h4>
+          </div>
+          <div class="column">
+            <div id="icon"></div>
+          </div>
+        </div>
+        <div class="container border m-5">
+          <div>
+            <h2>5-day forecast</h2>
+            <div class="cards">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./Assets/JS/script.js" async defer></script>
+</body>
+
+</html>

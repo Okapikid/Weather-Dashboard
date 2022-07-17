@@ -1,0 +1,7 @@
+header {
+  background: linear-gradient(to right, #1e5dd9 0%, #010e30 100%);
+}
+
+.vh-50 {
+  min-height: 50vh;
+}
