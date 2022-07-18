@@ -33,23 +33,24 @@ const searchedClick = function () {
   $(".city").on("click", function () {
     const cityCard = $(this).text()
     searchedCity = cityCard
-    cityAPI = `https://api.openweathermap.org/data/2.5/weather?q=${searchedCity}&appid=da46faa4e2f031a23137502340090190`
+    cityAPI = `https://api.openweathermap.org/data/2.5/onecall?q=${searchedCity}&appid=da46faa4e2f031a23137502340090190`
     $("#title").text(`${searchedCity}`)
     getWeather(cityAPI, stuff);
   })
 }
+searchedClick();
 
 const getWeather = function (cityInfo, stuff) {
   fetch(cityInfo).then(function (res) {
     return res.json()
   }).then(function (data) {
     stuff = data
-    const cityApiPull = `https://api.openweathermap.org/data/3.0/onecall?lat=${stuff.coord.lat}&lon=${stuff.coord.lon}&appid=da46faa4e2f031a23137502340090190`
+    const cityApiPull = `https://api.openweathermap.org/data/2.5/onecall?lat=${stuff.coord.lat}&lon=${stuff.coord.lon}&appid=da46faa4e2f031a23137502340090190`
     fetch(cityApiPull).then(function (res) {
       return res.json().then(function (data) {
-        $("#temp").text(`Temp: ${data.current.temp}`)
+        $("#temp").text(`Temp: ${data.temp}`)
         $("#wind").text(`Wind: ${data.wind_speed} MPH`)
-        $("#humidity").text(`Humidity ${data.current.humidity}%`)
+        $("#humidity").text(`Humidity ${data.humidity}%`)
         $("#uv").text(`UV Index: ${data.current.uvi}`)
       })
     })
